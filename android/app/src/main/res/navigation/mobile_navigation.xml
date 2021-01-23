@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="jp.eskmemorial.cellmesh.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_past_logs"
+        android:name="jp.eskmemorial.cellmesh.ui.pastlogs.PastLogsFragment"
+        android:label="@string/menu_past_logs"
+        tools:layout="@layout/fragment_past_logs" />
+
+    <fragment
+        android:id="@+id/nav_config"
+        android:name="jp.eskmemorial.cellmesh.ui.config.ConfigFragment"
+        android:label="@string/menu_config"
+        tools:layout="@layout/fragment_config" />
+
+    <fragment
+        android:id="@+id/nav_report_logs"
+        android:name="jp.eskmemorial.cellmesh.ui.reportlogs.ReportLogsFragment"
+        android:label="@string/menu_report_logs"
+        tools:layout="@layout/fragment_report_logs" />
+</navigation>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="config"
+            type="jp.eskmemorial.cellmesh.lib.LoggerConfig" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.config.ConfigFragment">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:layout_weight="0.5"
+                    android:padding="3dip"
+                    android:text="LocationUpdateIntervalSec" />
+
+                <EditText
+                    android:layout_weight="0.5"
+                    android:gravity="right"
+                    android:inputType="number"
+                    android:padding="3dip"
+                    android:text="@={jp.eskmemorial.cellmesh.ui.config.StringIntConverter.toString(config.locationUpdateIntervalSec)}" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:layout_weight="0.5"
+                    android:padding="3dip"
+                    android:text="LocationUpdateMinIntervalSec" />
+
+                <EditText
+                    android:layout_weight="0.5"
+                    android:gravity="right"
+                    android:inputType="number"
+                    android:padding="3dip"
+                    android:text="@={jp.eskmemorial.cellmesh.ui.config.StringIntConverter.toString(config.locationUpdateMinIntervalSec)}" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:layout_weight="0.5"
+                    android:padding="3dip"
+                    android:text="LocationUpdateMaxIntervalSec" />
+
+                <EditText
+                    android:layout_weight="0.5"
+                    android:gravity="right"
+                    android:inputType="number"
+                    android:padding="3dip"
+                    android:text="@={jp.eskmemorial.cellmesh.ui.config.StringIntConverter.toString(config.locationUpdateMaxIntervalSec)}" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:layout_weight="0.5"
+                    android:padding="3dip"
+                    android:text="CollectCellInfoMinIntervalSec" />
+
+                <EditText
+                    android:layout_weight="0.5"
+                    android:gravity="right"
+                    android:inputType="number"
+                    android:padding="3dip"
+                    android:text="@={jp.eskmemorial.cellmesh.ui.config.StringIntConverter.toString(config.collectCellsMinIntervalSec)}" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:layout_weight="0.5"
+                    android:padding="3dip"
+                    android:text="CollectCellInfoMinDistanceMeter" />
+
+                <EditText
+                    android:layout_weight="0.5"
+                    android:gravity="right"
+                    android:inputType="number"
+                    android:padding="3dip"
+                    android:text="@={jp.eskmemorial.cellmesh.ui.config.StringIntConverter.toString(config.collectCellsMinDistanceMeter)}" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:layout_weight="0.5"
+                    android:padding="3dip"
+                    android:text="RunSpeedTest" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:checked="@={config.runSpeedTest}" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:layout_weight="0.5"
+                    android:padding="3dip"
+                    android:text="RunSpeedTestMinIntervalSec" />
+
+                <EditText
+                    android:layout_weight="0.5"
+                    android:gravity="right"
+                    android:inputType="number"
+                    android:padding="3dip"
+                    android:text="@={jp.eskmemorial.cellmesh.ui.config.StringIntConverter.toString(config.runSpeedTestMinIntervalSec)}" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:layout_weight="0.5"
+                    android:padding="3dip"
+                    android:text="RunSpeedTestMinDistanceMeter" />
+
+                <EditText
+                    android:layout_weight="0.5"
+                    android:gravity="right"
+                    android:inputType="number"
+                    android:padding="3dip"
+                    android:text="@={jp.eskmemorial.cellmesh.ui.config.StringIntConverter.toString(config.runSpeedTestMinDistanceMeter)}" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_column="1"
+                    android:layout_weight="0.5"
+                    android:padding="3dip"
+                    android:text="RunSpeedTestIfCellChanged" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:checked="@={config.runSpeedTestIfCellChanged}" />
+            </TableRow>
+        </TableLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="cell"
+            type="jp.eskmemorial.cellmesh.lib.data.Cell" />
+    </data>
+
+    <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@{cell.isRegistered ? @android:color/darker_gray : @android:color/white}">
+
+        <TextView
+            android:layout_weight="1"
+            android:text="@{cell.generation}" />
+
+        <TextView
+            android:layout_weight="1"
+            android:text="@{Integer.toString(cell.earfcn)}" />
+
+        <TextView
+            android:layout_weight="1"
+            android:text="@{Integer.toString(cell.pci)}" />
+
+        <TextView
+            android:layout_weight="1"
+            android:text="@{cell.timingAdvance == Integer.MAX_VALUE ? `-` : Integer.toString(cell.timingAdvance)}" />
+
+        <TextView
+            android:layout_weight="1"
+            android:text="@{cell.cqi == Integer.MAX_VALUE ? `-` : Integer.toString(cell.cqi)}" />
+
+        <TextView
+            android:layout_weight="1"
+            android:text="@{cell.rsrp == Integer.MAX_VALUE? `-`: Integer.toString(cell.rsrp)}" />
+
+        <TextView
+            android:layout_weight="1"
+            android:text="@{cell.rssi == Integer.MAX_VALUE? `-`:Integer.toString(cell.rssi)}" />
+
+        <TextView
+            android:layout_weight="1"
+            android:text="@{cell.rsrq == Integer.MAX_VALUE? `-`:Integer.toString(cell.rsrq)}" />
+
+        <TextView
+            android:layout_weight="1"
+            android:text="@{cell.rssnr == Integer.MAX_VALUE ? `-` : Integer.toString(cell.rssnr)}" />
+
+    </TableRow>
+</layout>

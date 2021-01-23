@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="sim"
+            type="jp.eskmemorial.cellmesh.lib.data.Sim" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:padding="4dp"
+        app:cardCornerRadius="4dp">
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@{sim.isActive ? @android:color/darker_gray : @android:color/white}">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="SIM Slot" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@{Integer.toString(sim.slot)}" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="Carrier" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@{sim.carrier}" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="Operator" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@{sim.operator}" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="MCC/MNC" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@{sim.mcc+'/'+sim.mnc}" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="CID" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@{Integer.toString(sim.cid)}" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="TAC" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@{Integer.toString(sim.tac)}" />
+            </TableRow>
+        </TableLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
